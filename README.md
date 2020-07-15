@@ -25,3 +25,11 @@ We use the dataset “Park” and scDMFK model to give an example. Please downlo
 python run.py --dataname "Park" --model "multinomial" --mode "indirect"
 
 Then you will get the cluster result of “Park” dataset using scDMFK method in ten random seed. The median values of ARI and NMI are 0.832 and 0.776, respectively. Besides, you can also save the clustering label and low-dimensional latent representation for each cell to facilitate your other downstream analysis.
+
+Reference
+-----
+Our paper is published in Frontiers in Genetics. The details can be seen in <a href="https://www.frontiersin.org/articles/10.3389/fgene.2020.00295/full">article</a>. Please consider citing it.
+
+Contributing
+-----
+Author email: clandzyy@pku.edu.cn

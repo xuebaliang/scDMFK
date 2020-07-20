@@ -2,7 +2,7 @@ import tensorflow as tf
 import keras.backend as K
 from keras.layers import GaussianNoise, Dense, Activation
 from sklearn.cluster import KMeans
-from sklearn.metrics import adjusted_rand_score, adjusted_mutual_info_score
+from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score
 import os
 import numpy as np
 
@@ -290,7 +290,7 @@ class scDMFK(object):
         self.sess.close()
         self.accuracy = np.around(cluster_acc(Y, self.Y_pred), 4)
         self.ARI = np.around(adjusted_rand_score(Y, self.Y_pred), 4)
-        self.NMI = np.around(adjusted_mutual_info_score(Y, self.Y_pred), 4)
+        self.NMI = np.around(normalized_mutual_info_score(Y, self.Y_pred), 4)
         return self.accuracy, self.ARI, self.NMI
 
 
